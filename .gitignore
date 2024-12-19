@@ -1,0 +1,5 @@
+# Ignore Google Cloud service account key
+hostellog-440017-913cfcbd44ea.json
+
+# Ignore environment variables file
+.env
