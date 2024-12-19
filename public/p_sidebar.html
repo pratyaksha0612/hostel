@@ -1,0 +1,161 @@
+<html>
+ <head>
+  <title>
+   Aura Homes Menu
+  </title>
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" rel="stylesheet"/>
+  <style>
+   body, html {
+            margin: 0;
+            padding: 0;
+            height: 100%;
+            font-family: Arial, sans-serif;
+        }
+        .container {
+            display: flex;
+            height: 100%;
+        }
+        .sidebar {
+            width: 250px;
+            background-color: #fff;
+            box-shadow: 2px 0 5px rgba(0,0,0,0.1);
+            padding: 10px;
+        }
+        .sidebar h2 {
+            display: flex;
+            align-items: center;
+            font-size: 18px;
+            margin: 0;
+            padding: 10px 0;
+            color: #000;
+        }
+        .sidebar h2 i {
+            margin-right: 10px;
+        }
+        .sidebar ul {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+        }
+        .sidebar ul li {
+            padding: 10px 0;
+            display: flex;
+            align-items: center;
+            cursor: pointer;
+        }
+        .sidebar ul li i {
+            margin-right: 10px;
+        }
+        .sidebar ul li:hover {
+            background-color: #f0f0f0;
+        }
+        .main-content {
+            flex: 1;
+            background-color: #808080;
+            padding: 20px;
+        }
+        .header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            background: linear-gradient(to right, #1e3c72, #2a5298);
+            padding: 10px 20px;
+            color: #fff;
+        }
+        .header .menu-icon {
+            font-size: 24px;
+            cursor: pointer;
+        }
+        .header .user-info {
+            display: flex;
+            align-items: center;
+        }
+        .header .user-info img {
+            border-radius: 50%;
+            width: 40px;
+            height: 40px;
+            margin-right: 10px;
+        }
+  </style>
+ </head>
+ <body>
+  <div class="header">
+   <div class="menu-icon">
+    <i class="fas fa-bars">
+    </i>
+   </div>
+   <div class="user-info">
+    <img src="Parents .jpg"  alt="Parent Logo" class="h-16" height="100"  width="75"/>
+    <span>
+     PARENT
+    </span>
+   </div>
+  </div>
+  <div class="container">
+   <div class="sidebar">
+    <h2>
+     <a href="/p-sidebar">   
+      <i class="fas fa-">
+      </i>
+      AURA HOMES MENU
+     </a> 
+    </h2>
+    <ul>
+     <li>
+      <a href="/p-attendance">  
+       <i class="fas fa-bell">
+       </i>
+       Attendance
+      </a> 
+      </i>
+     </li>
+     <li>
+      <a href="/p-mess-menu">
+       <i class="fas fa-utensils">
+       Mess Menu
+       </i>
+      </a> 
+     </li>
+     <li>
+      <a href="/p-room-cleaning">  
+       <i class="fas fa-broom">
+       </i>
+       Room Clean
+      </a> 
+     </li>
+     <li>
+      <a href="/p-complaints">
+       <i class="fas fa-book">
+       </i>
+       Complains
+      </a> 
+     </li>
+     <li>
+      <a href="/p-notice-board">  
+       <i class="fas fa-thumbtack">
+       </i>
+       Notice Board
+      </a> 
+     </li>
+     <li>
+      <a href="/p-social-media">  
+       <i class="fas fa-comment">
+       </i>
+       Social Media
+      </a> 
+     </li>
+     <li>
+        <a href="/p-contact">
+         <i class="fas fa-phone-volume">
+         </i>
+         Emergency Contact
+        </a>
+   </li>
+    </ul>
+   </div>
+   <div class="main-content">
+    <!-- Main content goes here -->
+   </div>
+  </div>
+ </body>
+</html>

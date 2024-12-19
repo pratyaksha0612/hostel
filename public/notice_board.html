@@ -1,0 +1,346 @@
+<html>
+ <head>
+  <title>
+   Personal Information
+  </title>
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" rel="stylesheet"/>
+  <style>
+   body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f0f0f0;
+        }
+        .header {
+            background-color: #003366;
+            color: white;
+            padding: 10px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        .header img {
+            height: 40px;
+        }
+        .header .user-info {
+            display: flex;
+            align-items: center;
+        }
+        .header .user-info img {
+            border-radius: 50%;
+            height: 40px;
+            margin-left: 10px;
+        }
+        .container {
+            display: flex;
+        }
+        .sidebar {
+            width: 20px;
+            background-color: #ffffff;
+            color: rgb(16, 16, 16);
+            padding: 10px;
+            height: 200vh;
+        }
+        .sidebar ul {
+            list-style-type: none;
+            padding: 0;
+        }
+        .sidebar ul li {
+            padding: 10px 0;
+        }
+        .sidebar ul li a {
+            color: rgb(0, 0, 0);
+            text-decoration: none;
+        }
+        .main-content {
+            flex-grow: 1;
+            margin: 20px;
+        }
+        .tabs {
+            display: flex;
+            background-color: #e0e0e0;
+            padding: 10px;
+        }
+        .tabs div {
+            margin-right: 20px;
+            padding: 10px;
+            cursor: pointer;
+        }
+        .tabs .active {
+            background-color: #003366;
+            color: white;
+        }
+        .content {
+            background-color: #fff;
+            padding: 20px;
+            border: 1px solid #ccc;
+        }
+        .section {
+            margin-bottom: 20px;
+        }
+        .section-header {
+            background-color: #d0d0ff;
+            padding: 10px;
+            font-weight: bold;
+            cursor: pointer;
+        }
+        .section-content {
+            background-color: #ffe0e0;
+            padding: 10px;
+            display: none;
+        }
+        .section-content div {
+            display: flex;
+            justify-content: space-between;
+            padding: 5px 0;
+        }
+        .section-content div span {
+            width: 45%;
+        }
+        .profile-pic {
+            float: right;
+            margin: 10px;
+        }
+        .profile-pic img {
+            border-radius: 50%;
+            height: 100px;
+        }
+  </style>
+  <script>
+   document.addEventListener("DOMContentLoaded", function() {
+            var headers = document.querySelectorAll(".section-header");
+            headers.forEach(function(header) {
+                header.addEventListener("click", function() {
+                    var content = this.nextElementSibling;
+                    if (content.style.display === "none" || content.style.display === "") {
+                        content.style.display = "block";
+                    } else {
+                        content.style.display = "none";
+                    }
+                });
+            });
+        });
+  </script>
+ </head>
+ <body>
+  <div class="header">
+    <img src="Aura_Homes.png"  alt="Aura Homes Logo" class="h-16" height="100"  width="75"/>
+   <div class="user-info">
+    <span>
+     Name
+    </span>
+    <img src="Students.jpg"  alt="Student Logo" class="h-16" height="100"  width="50"/>
+   </div>
+  </div>
+  <div class="container">
+   <div class="sidebar">
+    <ul>
+     <li>
+      <a href="/sidebar-student">
+       <i class="fas fa-bars">
+       </i>
+      </a>
+     </li>
+     <li>
+      <a href="/personal-info">
+       <i class="fas fa-envelope">
+       </i>
+      </a>
+     </li>
+     <li>
+      <a href="/student-attendance">
+       <i class="fas fa-bell">
+       </i>
+      </a>
+     </li>
+     <li>
+      <a href="/mess-menu">
+       <i class="fas fa-utensils">
+       </i>
+      </a>
+     </li>
+     <li>
+        <a href="/room-cleaning">
+         <i class="fas fa-broom">
+         </i>
+        </a>
+    </li>
+    <li>
+        <a href="#">
+         <i class="fas fa-book">
+         </i>
+        </a>
+    </li>
+    <li>
+        <a href="/notice-board">
+         <i class="fas fa-thumbtack">
+         </i>
+        </a>
+    </li>
+    <li>
+        <a href="/social-media">
+         <i class="fas fa-comment">
+         </i>
+        </a>
+     </li>
+     <li>
+        <a href="#">
+         <i class="fas fa-phone-volume">
+         </i>
+        </a>
+    </li>
+
+    </ul>
+   </div>
+   <div class="main-content">
+    <div class="tabs">
+     <div class="active">
+      Notice Board
+     </div>
+    </div>
+    <div class="content">
+     <div class="section">
+      <div class="section-header">
+       Timings
+      </div>
+      <div class="section-content">
+       <div>
+        <span>
+         Supervisior
+        </span>
+        <span>
+        </span>
+       </div>
+       <div>
+        <span>
+         Warden
+        </span>
+        <span>
+        </span>
+       </div>
+       <div>
+        <span>
+         Chief Warden
+        </span>
+        <span>
+        </span>
+       </div>
+       <div>
+        <span>
+         Moblie/laptop repair
+        </span>
+        <span>
+        </span>
+       </div>
+       <div>
+        <span>
+         Medical Room
+        </span>
+        <span>
+        </span>
+       </div>
+      </div>
+     </div>
+     <div class="section">
+      <div class="section-header">
+       EmailId
+      </div>
+      <div class="section-content">
+       <div>
+        <span>
+         Chief Warden
+        </span>
+        <span>
+        </span>
+       </div>
+       <div>
+        <span>
+         Warden
+        </span>
+        <span>
+        </span>
+       </div>
+       <div>
+        <span>
+         Supervisior
+        </span>
+        <span>
+        </span>
+       </div>
+       <div>
+        <span>
+         Deputy Supervisior
+        </span>
+        <span>
+        </span>
+       </div>
+      </div>
+     </div>
+     <div class="section">
+      <div class="section-header">
+       Authority Phone No.
+      </div>
+      <div class="section-content">
+       <div>
+        <span>
+         Supervisior
+        </span>
+        <span>
+        </span>
+       </div>
+       <div>
+        <span>
+         Warden
+        </span>
+        <span>
+        </span>
+       </div>
+       <div>
+        <span>
+         Cheif Warden
+        </span>
+        <span>
+        </span>
+       </div>
+      </div>
+     </div>
+     <div class="section">
+      <div class="section-header">
+       Cabin No.
+      </div>
+      <div class="section-content">
+       <div>
+        <span>
+         Warden
+        </span>
+        <span>
+        </span>
+       </div>
+       <div>
+        <span>
+         Supervisior
+        </span>
+        <span>
+        </span>
+       </div>
+       <div>
+        <span>
+         Chief Warden
+        </span>
+        <span>
+        </span>
+       </div>
+       <div>
+        <span>
+         Medical Room
+        </span>
+        <span>
+        </span>
+       </div>
+      </div>
+     </div>
+    </div>
+   </div>
+  </div>
+ </body>
+</html>

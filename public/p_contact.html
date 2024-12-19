@@ -1,0 +1,116 @@
+<html>
+<head>
+    <title>Emergence Contact Details</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+        }
+        .sidebar {
+            width: 60px;
+            background-color: #f5f5f5;
+            position: fixed;
+            height: 100%;
+            padding-top: 20px;
+        }
+        .sidebar a {
+            display: block;
+            text-align: center;
+            padding: 10px 0;
+            color: black;
+            text-decoration: none;
+        }
+        .sidebar a:hover {
+            background-color: #ddd;
+        }
+        .header {
+            background-color: #0056b3;
+            color: white;
+            padding: 10px 20px;
+            text-align: right;
+        }
+        .header i {
+            margin-right: 10px;
+        }
+        .content {
+            margin-left: 60px;
+            padding: 20px;
+        }
+        .content h1 {
+            font-size: 24px;
+        }
+        .content h2 {
+            font-size: 20px;
+        }
+        .content select {
+            padding: 5px;
+            font-size: 16px;
+        }
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-top: 20px;
+        }
+        table, th, td {
+            border: 1px solid #ddd;
+        }
+        th, td {
+            padding: 10px;
+            text-align: left;
+        }
+        th {
+            background-color: #f2f2f2;
+        }
+    </style>
+    <script>
+        function showMenu() {
+            var month = document.getElementById("monthSelect").value;
+            var menus = document.getElementsByClassName("monthlyMenu");
+            for (var i = 0; i < menus.length; i++) {
+                menus[i].style.display = "none";
+            }
+            if (month !== "--Choose Month--") {
+                document.getElementById(month + "Menu").style.display = "block";
+            }
+        }
+    </script>
+</head>
+<body>
+    <div class="sidebar">
+        <a href="/p-sidebar"><i class="fas fa-bars"></i></a>
+        <a href="/p-attendance"><i class="fas fa-bell"></i></a>
+        <a href="/p-mess-menu"><i class="fas fa-utensils"></i></a>
+        <a href="/p-room-cleaning"><i class="fas fa-broom"></i></a>
+        <a href="/p-complaints"><i class="fas fa-book"></i></a>
+        <a href="/p-notice-board"><i class="fas fa-thumbtack"></i></a>
+        <a href="/p-social-media"><i class="fas fa-comment"></i></a>
+        <a href="/p-contact"><i class="fas fa-phone-volume"></i></a>
+    </div>
+    <div class="header">
+        <i class="fas fa-question-circle"></i> PARENT
+    </div>
+    <div class="content">
+        <h1>Emergence Contact Details</h1>
+        <br>
+        <select id="monthSelect" onchange="showMenu()">
+            <option>--Contact Details--</option>
+            <option>
+                Supervise 
+               </option>
+               <option>
+                Recipient 
+               </option>
+               <option>
+                Medical 
+               </option>
+               <option>
+                Electrician
+               </option>
+        </select>
+        
+
+    </div>
+</body>
+</html>

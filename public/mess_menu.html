@@ -1,0 +1,304 @@
+<html>
+<head>
+    <title>Mess Menu</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+        }
+        .sidebar {
+            width: 60px;
+            background-color: #f5f5f5;
+            position: fixed;
+            height: 100%;
+            padding-top: 20px;
+        }
+        .sidebar a {
+            display: block;
+            text-align: center;
+            padding: 10px 0;
+            color: black;
+            text-decoration: none;
+        }
+        .sidebar a:hover {
+            background-color: #ddd;
+        }
+        .header {
+            background-color: #0056b3;
+            color: white;
+            padding: 10px 20px;
+            text-align: right;
+        }
+        .header i {
+            margin-right: 10px;
+        }
+        .content {
+            margin-left: 60px;
+            padding: 20px;
+        }
+        .content h1 {
+            font-size: 24px;
+        }
+        .content h2 {
+            font-size: 20px;
+        }
+        .content select {
+            padding: 5px;
+            font-size: 16px;
+        }
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-top: 20px;
+        }
+        table, th, td {
+            border: 1px solid #ddd;
+        }
+        th, td {
+            padding: 10px;
+            text-align: left;
+        }
+        th {
+            background-color: #f2f2f2;
+        }
+    </style>
+    <script>
+        function showMenu() {
+            var month = document.getElementById("monthSelect").value;
+            var menus = document.getElementsByClassName("monthlyMenu");
+            for (var i = 0; i < menus.length; i++) {
+                menus[i].style.display = "none";
+            }
+            if (month !== "--Choose Month--") {
+                document.getElementById(month + "Menu").style.display = "block";
+            }
+        }
+    </script>
+</head>
+<body>
+    <div class="sidebar">
+        <a href="/sidebar-student"><i class="fas fa-bars"></i></a>
+        <a href="/personal-info"><i class="fas fa-envelope"></i></a>
+        <a href="/student-attendance"><i class="fas fa-bell"></i></a>
+        <a href="/mess-menu"><i class="fas fa-utensils"></i></a>
+        <a href="/room-cleaning"><i class="fas fa-broom"></i></a>
+        <a href="#"><i class="fas fa-book"></i></a>
+        <a href="/noticeboard"><i class="fas fa-thumbtack"></i></a>
+        <a href="/social-media"><i class="fas fa-comment"></i></a>
+        <a href="#"><i class="fas fa-phone-volume"></i></a>
+    </div>
+    <div class="header">
+        <i class="fas fa-question-circle"></i> STUDENT
+    </div>
+    <div class="content">
+        <h1>Mess Menu</h1>
+        <label for="mess menu"> Monthly </label>
+        
+        <select id="monthSelect" onchange="showMenu()">
+            <option>--Choose Month--</option>
+            <option>January</option>
+            <option>February</option>
+            <option>March</option>
+            <option>April</option>
+            <option>May</option>
+            <option>June</option>
+            <option>July</option>
+            <option>August</option>
+            <option>September</option>
+            <option>October</option>
+            <option>November</option>
+            <option>December</option>
+        </select>
+        
+        <div id="JanuaryMenu" class="monthlyMenu" style="display: none;">
+            <h2>Weekly Menu for January</h2>
+            <table>
+                <tr>
+                    <th>Day</th>
+                    <th>Breakfast</th>
+                    <th>Lunch</th>
+                    <th>Snacks</th>
+                    <th>Dinner</th>
+                </tr>
+                <tr>
+                    <td>Monday</td>
+                    <td>Pancakes</td>
+                    <td>Grilled sandwich</td>
+                    <td>Pasta</td>
+                    <td>dal rice</td>
+                </tr>
+                <tr>
+                    <td>Tuesday</td>
+                    <td>bread butter</td>
+                    <td>Beef Stew</td>
+                    <td>cutlet</td>
+                    <td>paneer paratha</td>
+                </tr>
+                <tr>
+                    <td>Wednesday</td>
+                    <td>French Toast</td>
+                    <td>sambar rice</td>
+                    <td>Pizza</td>
+                    <td>manchurian rice</td>
+                </tr>
+                <tr>
+                    <td>Thursday</td>
+                    <td>pav bhaji</td>
+                    <td>salad</td>
+                    <td>Burgers</td>
+                    <td>triangle paratha</td>
+                </tr>
+                <tr>
+                    <td>Friday</td>
+                    <td>Waffles</td>
+                    <td>aloo Curry</td>
+                    <td>veg puff</td>
+                    <td>Methi chapathi</td>
+                </tr>
+                <tr>
+                    <td>Saturday</td>
+                    <td>Chole Bhatura</td>
+                    <td>Bhindi Masala</td>
+                    <td>samosa</td>
+                    <td>butter roti</td>
+                </tr>
+                <tr>
+                    <td>Sunday</td>
+                    <td>Fruit Salad</td>
+                    <td>tomato dhal</td>
+                    <td>bhel</td>
+                    <td>paneer bhurji</td>
+                </tr>
+            </table>
+        </div>
+
+        <div id="FebruaryMenu" class="monthlyMenu" style="display: none;">
+            <h2>Weekly Menu for February</h2>
+            <table>
+                <tr>
+                    <th>Day</th>
+                    <th>Breakfast</th>
+                    <th>Lunch</th>
+                    <th>Snacks</th>
+                    <th>Dinner</th>
+                </tr>
+                <tr>
+                    <td>Monday</td>
+                    <td>Oatmeal</td>
+                    <td>Chicken Salad</td>
+                    <td>Fruit</td>
+                    <td>Vegetable Soup</td>
+                </tr>
+                <tr>
+                    <td>Tuesday</td>
+                    <td>Scrambled Eggs</td>
+                    <td>Grilled Chicken</td>
+                    <td>Yogurt</td>
+                    <td>Spaghetti</td>
+                </tr>
+                <tr>
+                    <td>Wednesday</td>
+                    <td>Bagels</td>
+                    <td>Fish Tacos</td>
+                    <td>Granola Bar</td>
+                    <td>Steak</td>
+                </tr>
+                <tr>
+                    <td>Thursday</td>
+                    <td>Fruit Smoothie</td>
+                    <td>Vegetable Stir Fry</td>
+                    <td>Chips</td>
+                    <td>Chicken Curry</td>
+                </tr>
+                <tr>
+                    <td>Friday</td>
+                    <td>Pancakes</td>
+                    <td>BLT Sandwich</td>
+                    <td>Cookies</td>
+                    <td>Pizza</td>
+                </tr>
+                <tr>
+                    <td>Saturday</td>
+                    <td>Waffles</td>
+                    <td>Turkey Sandwich</td>
+                    <td>Ice Cream</td>
+                    <td>BBQ Ribs</td>
+                </tr>
+                <tr>
+                    <td>Sunday</td>
+                    <td>French Toast</td>
+                    <td>Caesar Salad</td>
+                    <td>Brownies</td>
+                    <td>Lasagna</td>
+                </tr>
+            </table>
+        </div>
+
+        <div id="MarchMenu" class="monthlyMenu" style="display: none;">
+            <h2>Weekly Menu for March</h2>
+            <table>
+                <tr>
+                    <th>Day</th>
+                    <th>Breakfast</th>
+                    <th>Lunch</th>
+                    <th>Snacks</th>
+                    <th>Dinner</th>
+                </tr>
+                <tr>
+                    <td>Monday</td>
+                    <td>Toast</td>
+                    <td>Chicken Wrap</td>
+                    <td>Fruit</td>
+                    <td>Vegetable Soup</td>
+                </tr>
+                <tr>
+                    <td>Tuesday</td>
+                    <td>Scrambled Eggs</td>
+                    <td>Grilled Chicken</td>
+                    <td>Yogurt</td>
+                    <td>Spaghetti</td>
+                </tr>
+                <tr>
+                    <td>Wednesday</td>
+                    <td>Bagels</td>
+                    <td>Fish Tacos</td>
+                    <td>Granola Bar</td>
+                    <td>Steak</td>
+                </tr>
+                <tr>
+                    <td>Thursday</td>
+                    <td>Fruit Smoothie</td>
+                    <td>Vegetable Stir Fry</td>
+                    <td>Chips</td>
+                    <td>Chicken Curry</td>
+                </tr>
+                <tr>
+                    <td>Friday</td>
+                    <td>Pancakes</td>
+                    <td>BLT Sandwich</td>
+                    <td>Cookies</td>
+                    <td>Pizza</td>
+                </tr>
+                <tr>
+                    <td>Saturday</td>
+                    <td>Waffles</td>
+                    <td>Turkey Sandwich</td>
+                    <td>Ice Cream</td>
+                    <td>BBQ Ribs</td>
+                </tr>
+                <tr>
+                    <td>Sunday</td>
+                    <td>French Toast</td>
+                    <td>Caesar Salad</td>
+                    <td>Brownies</td>
+                    <td>Lasagna</td>
+                </tr>
+            </table>
+        </div>
+
+
+    </div>
+</body>
+</html>

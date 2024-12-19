@@ -1,0 +1,187 @@
+<html>
+<head>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+    <style>
+        body {
+            margin: 0;
+            font-family: Arial, sans-serif;
+            background-color: F1F0E8;
+        }
+        .container {
+            display: flex;
+        }
+        .sidebar {
+            height: 100vh;
+            width: 70px;
+            position: fixed;
+            top: 60;
+            left: 0;
+            background-color: EEF7FF;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            padding-top: 10px;
+        }
+        .sidebar i {
+            font-size: 24px;
+            margin: 20px 0;
+            color: black;
+        }
+    
+        .header {
+            background-color: #4a7a8c;
+            color: white;
+            padding: 00px 00px;
+            height:50px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        .header .left-section {
+            display: flex;
+            align-items: center;
+        }
+        .header .menu-icon {
+            font-size: 24px;
+            cursor: pointer;
+            margin-left: 20px;
+        }
+        .header .logo {
+            height: 5px;
+            margin-right: 20px;
+        }
+        .header .user-info {
+            display: flex;
+            align-items: center;
+        }
+        .header .user-info i {
+            margin-right: 5px;
+        }
+        .content {
+            margin-left: 60px;
+            margin-top: 60px;
+            padding: 10px;
+        }
+        .content h1 {
+            font-size: 24px;
+            font-weight: bold;
+        }
+        .dropdown {
+            margin-top: 20px;
+        }
+        .dropdown select {
+            padding: 10px;
+            font-size: 16px;
+        }
+        .notice-box {
+            margin-top: 20px;
+            padding: 15px;
+            border: 1px solid #ccc;
+            background-color: #f9f9f9;
+            font-size: 16px;
+            width: 100%;
+            max-width: 600px;
+        }
+        .insta-id, .whatsapp-id {
+            margin-top: 20px;
+            padding: 15px;
+            border: 1px solid #ccc;
+            background-color: #f9f9f9;
+            font-size: 16px;
+            width: 100%;
+            max-width: 600px;
+            display: none;
+        }
+    </style>
+    <script>
+        function handleDropdownChange() {
+            var selectBox = document.getElementById("socialMediaDropdown");
+            var instaIdBox = document.getElementById("instaIdBox");
+            var whatsappIdBox = document.getElementById("whatsappIdBox");
+            if (selectBox.value === "Mess") {
+                instaIdBox.style.display = "block";
+                whatsappIdBox.style.display = "none";
+            } else if (selectBox.value === "Room Service") {
+                whatsappIdBox.style.display = "block";
+                instaIdBox.style.display = "none";
+            } else {
+                instaIdBox.style.display = "none";
+                whatsappIdBox.style.display = "none";
+            }
+        }
+    </script>
+</head>
+<body>
+    <div class="header">
+        <div class="left-section">
+            <img src="Aura_Homes.png"  alt="Aura Homes Logo" class="h-16" height="40"  width="75"/>
+        </div>
+        <div class="user-info">
+            <i class="fas fa-question-circle"></i>
+            <span>AUTHORITY</span>
+        </div>
+    </div>
+    <div class="sidebar">
+        <a href="/a-sidebar">
+         <i class="fas fa-bars">
+         </i>
+        </a>
+        <a href="/a-attendance">
+         <i class="fas fa-bell">
+         </i>
+        </a>
+        <a href="/a-mess-menu">
+         <i class="fas fa-utensils">
+         </i>
+        </a>
+        <a href="/a-room-cleaning">
+         <i class="fas fa-broom">
+         </i>
+        </a>
+        <a href="/a-complaints">
+         <i class="fas fa-book">
+         </i>
+        </a>
+        <a href="/a-notice-board">
+         <i class="fas fa-thumbtack">
+         </i>
+        </a>
+        <a href="/a-social-media">
+         <i class="fas fa-comment">
+         </i>
+        </a>
+        <a href="/a-contact">
+         <i class="fas fa-phone">
+         </i>
+        </a>
+        <a href="/a-change">
+         <i class="fas fa-lock">
+         </i>
+        </a>
+       </div>
+    <div class="content">
+        <h1>Social Media</h1>
+        <div class="dropdown">
+            <select id="socialMediaDropdown" onchange="handleDropdownChange()">
+                <option>--Connect Here--</option>
+                <option>Mess</option>
+                <option>Room Service</option>
+                <option>Other</option>
+            </select>
+        </div>
+        <div class="notice-box">
+            This is a notice box. You can add any important information here.
+        </div>
+        <div id="instaIdBox" class="insta-id">
+            Instagram ID: @example_insta_id1
+        <br><br>
+            WhatsApp ID: +1234567887
+        </div>
+        <div id="whatsappIdBox" class="whatsapp-id">
+            Instagram ID: @example_insta_id2
+        <br><br>
+            WhatsApp ID: +1234567890
+        </div>
+    </div>
+</body>
+</html>

@@ -1,0 +1,256 @@
+<html>
+ <head>
+  <title>
+   Notice Board
+  </title>
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" rel="stylesheet"/>
+  <style>
+   body {
+            margin: 0;
+            font-family: Arial, sans-serif;
+        }
+        .container {
+            display: flex;
+            height: 130vh;
+        }
+        .sidebar {
+            width: 40px;
+            background-color: #ffffff;
+            color: white;
+            padding: 10px 0;
+            position: absolute;
+            top: 60px; 
+            bottom: 0;
+        }
+        .sidebar a {
+            display: block;
+            color: rgb(0, 0, 0);
+            padding: 10px 20px;
+            text-decoration: none;
+            font-size: 16px;
+        }
+        .sidebar a:hover {
+            background-color: #575757;
+        }
+        .sidebar a i {
+            margin-right: 10px;
+        }
+        .main-content {
+            flex-grow: 1;
+            background-color: #f4f4f4;
+            padding: 20px;
+            margin-left: 200px; 
+        }
+        .header {
+            background-color: #4D869C;
+            color: white;
+            padding: 10px 20px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            position: fixed;
+            width: 100%;
+            top: 0;
+            left: 0;
+            z-index: 1000;
+        }
+        .header h1 {
+            margin: 0;
+            font-size: 20px;
+            display: flex;
+            align-items: center;
+        }
+        .header h1 img {
+            margin-right: 10px;
+            width: 30px;
+            height: 30px;
+        }
+        .header .profile {
+            display: flex;
+            align-items: center;
+        }
+        .header .profile img {
+            border-radius: 50%;
+            width: 30px;
+            height: 30px;
+            margin-right: 10px;
+        }
+        .card {
+            background-color: EEF7FF;
+            padding: 40px;
+            margin-bottom: 20px;
+            border-radius: 5px;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+        }
+        .toggle-button {
+            position: absolute;
+            bottom: 20px;
+            right: 20px;
+            background-color: 4D869C;
+            color: rgb(0, 0, 0);
+            border: none;
+            padding: 10px 20px;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+  </style>
+ </head>
+ <body>
+  <div class="header">
+   <h1>
+    <img src="Aura_Homes.png"  alt="Aura Homes Logo" class="h-16" height="50"  width="75"/>
+   </h1>
+   <div class="profile">
+    <img alt="Profile Picture" height="30" src="https://storage.googleapis.com/a1aa/image/e36RafZCjWikK0LBwlIpxQJGD4UYdzXJZ7LMBkwfVwGoVspnA.jpg" width="30"/>
+    <span>
+     Authority
+    </span>
+   </div>
+  </div>
+  <div class="container">
+    <div class="sidebar">
+        <a href="/a-sidebar">
+         <i class="fas fa-bars">
+         </i>
+        </a>
+        <a href="/a-attendance">
+         <i class="fas fa-bell">
+         </i>
+        </a>
+        <a href="/a-mess-menu">
+         <i class="fas fa-utensils">
+         </i>
+        </a>
+        <a href="/a-room-cleaning">
+         <i class="fas fa-broom">
+         </i>
+        </a>
+        <a href="/a-complaints">
+         <i class="fas fa-book">
+         </i>
+        </a>
+        <a href="/a-notice-board">
+         <i class="fas fa-thumbtack">
+         </i>
+        </a>
+        <a href="/a-social-media">
+         <i class="fas fa-comment">
+         </i>
+        </a>
+        <a href="/a-contact">
+         <i class="fas fa-phone">
+         </i>
+        </a>
+        <a href="/a-change">
+         <i class="fas fa-lock">
+         </i>
+        </a>
+       </div>
+   <div class="main-content">
+    <div class="card">
+     <h2>
+      Timings
+     </h2>
+     <p>
+      <strong>
+       Supervisior
+      </strong>
+     </p>
+     <p>
+      <strong>
+       Warden
+      </strong>
+     </p>
+     <p>
+      <strong>
+       Chief Warden
+      </strong>
+     </p>
+     <p>
+      <strong>
+       Mobile/laptop repair
+      </strong>
+     </p>
+     <p>
+      <strong>
+       Medical Room
+      </strong>
+     </p>
+    </div>
+    <div class="card">
+     <h2>
+      EmailId
+     </h2>
+     <p>
+      <strong>
+       Warden
+      </strong>
+     </p>
+     <p>
+      <strong>
+       Supervisior
+      </strong>
+     </p>
+     <p>
+      <strong>
+       Chief Warden
+      </strong>
+     </p>
+     <p>
+      <strong>
+       Deputy Supervisior
+      </strong>
+     </p>
+    </div>
+    <div class="card">
+     <h2>
+      Authority Phone Number
+     </h2>
+     <p>
+      <strong>
+       Chief Warden
+      </strong>
+     </p>
+     <p>
+      <strong>
+       Warden
+      </strong>
+     </p>
+     <p>
+      <strong>
+       Supervisior
+      </strong>
+     </p>
+    </div>
+    <div class="card">
+     <h2>
+      Cabin No.
+     </h2>
+     <p>
+      <strong>
+       Chief Warden
+      </strong>
+     </p>
+     <p>
+      <strong>
+       Warden
+      </strong>
+     </p>
+     <p>
+      <strong>
+       Supervisior
+      </strong>
+     </p>
+     <p>
+      <strong>
+       Medical Room
+      </strong>
+     </p>
+    </div>
+   </div>
+  </div>
+  <button class="toggle-button">
+   Toggle Edit Mode
+  </button>
+ </body>
+</html>

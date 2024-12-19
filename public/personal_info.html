@@ -1,0 +1,445 @@
+<html>
+ <head>
+
+  <title>
+   Personal Information
+  </title>
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" rel="stylesheet"/>
+  <style>
+   body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f0f0f0;
+        }
+        .header {
+            background-color: #003366;
+            color: white;
+            padding: 10px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        .header img {
+            height: 40px;
+        }
+        .header .user-info {
+            display: flex;
+            align-items: center;
+        }
+        .header .user-info img {
+            border-radius: 50%;
+            height: 40px;
+            margin-left: 10px;
+        }
+        .container {
+            display: flex;
+        }
+        .sidebar {
+            width: 20px;
+            background-color: #ffffff;
+            color: rgb(16, 16, 16);
+            padding: 10px;
+            height: 200vh;
+        }
+        .sidebar ul {
+            list-style-type: none;
+            padding: 0;
+        }
+        .sidebar ul li {
+            padding: 10px 0;
+        }
+        .sidebar ul li a {
+            color: rgb(0, 0, 0);
+            text-decoration: none;
+        }
+        .main-content {
+            flex-grow: 1;
+            margin: 20px;
+        }
+        .tabs {
+            display: flex;
+            background-color: #e0e0e0;
+            padding: 10px;
+        }
+        .tabs div {
+            margin-right: 20px;
+            padding: 10px;
+            cursor: pointer;
+        }
+        .tabs .active {
+            background-color: #003366;
+            color: white;
+        }
+        .content {
+            background-color: #fff;
+            padding: 20px;
+            border: 1px solid #ccc;
+        }
+        .section {
+            margin-bottom: 20px;
+        }
+        .section-header {
+            background-color: #d0d0ff;
+            padding: 10px;
+            font-weight: bold;
+            cursor: pointer;
+        }
+        .section-content {
+            background-color: #ffe0e0;
+            padding: 10px;
+            display: none;
+        }
+        .section-content div {
+            display: flex;
+            justify-content: space-between;
+            padding: 5px 0;
+        }
+        .section-content div span {
+            width: 45%;
+        }
+        .profile-pic {
+            float: right;
+            margin: 10px;
+        }
+        .profile-pic img {
+            border-radius: 50%;
+            height: 100px;
+        }
+  </style>
+ </head>
+ <body>
+  <div class="header">
+    <img src="Aura_Homes.png"  alt="Aura Homes Logo" class="h-16" height="100"  width="75"/>
+   <div class="user-info">
+    <span>
+     Student Name
+    </span>
+    <img src="Students.jpg"  alt="Student Logo" class="h-16" height="100"  width="50"/>
+   </div>
+  </div>
+  <div class="container">
+   <div class="sidebar">
+    <ul>
+     <li><a href="/sidebar-student"><i class="fas fa-bars"></i></a></li>
+     <li><a href="/personal-info"><i class="fas fa-envelope"></i></a></li>
+     <li><a href="/student-attendance"><i class="fas fa-bell"></i></a></li>
+     <li><a href="/mess-menu"><i class="fas fa-utensils"></i></a></li>
+     <li><a href="/room-cleaning"><i class="fas fa-broom"></i></a></li>
+     <li> <a href="#"><i class="fas fa-book"></i></a></li>
+     <li><a href="/notice-board"><i class="fas fa-thumbtack"></i></a></li>
+     <li><a href="/social-media"><i class="fas fa-comment"></i></a></li>
+     <li><a href="#"><i class="fas fa-phone-volume"></i></a></li>
+    </ul>
+   </div>
+   <div class="main-content">
+    <div class="tabs">
+     <div class="active">
+      <a href='/personal-info'>Personal Information</a>
+     </div>
+     <div>
+      <a href='/educational-info'>Educational Information</a>
+     </div>
+     <div>
+        <a href="/family-info">Family Information</a>
+     </div>
+     <div>
+      <a href='/proctor-info'>Proctor Details</a>
+     </div>
+     <div>
+      <a href='/hostel-details'>Hostel Details</a>
+     </div>
+    </div>
+    <div class="content">
+     <div class="section">
+      <div class="section-header">
+       Personal Information
+      </div>
+      <div class="section-content">
+       <div>
+        <span>
+         Application Number
+        </span>
+        <span>
+        </span>
+       </div>
+       <div>
+        <span>
+         Student Name
+        </span>
+        <span>
+        </span>
+       </div>
+       <div>
+        <span>
+         Father's Name
+        </span>
+        <span>
+        </span>
+       </div>
+       <div>
+        <span>
+         Date of Birth
+        </span>
+        <span>
+        </span>
+       </div>
+       <div>
+        <span>
+         Gender
+        </span>
+        <span>
+        </span>
+       </div>
+       <div>
+        <span>
+         Mother Tongue
+        </span>
+        <span>
+        </span>
+       </div>
+       <div>
+        <span>
+         Native State
+        </span>
+        <span>
+        </span>
+       </div>
+       <div>
+        <span>
+         Blood Group
+        </span>
+        <span>
+        </span>
+       </div>
+       <div>
+        <span>
+         Physically Challenged
+        </span>
+        <span>
+        </span>
+       </div>
+       <div>
+        <span>
+         Community
+        </span>
+        <span>
+        </span>
+       </div>
+       <div>
+        <span>
+         Religion
+        </span>
+        <span>
+        </span>
+       </div>
+       <div>
+        <span>
+         Nationality
+        </span>
+        <span>
+        </span>
+       </div>
+       <div>
+        <span>
+         Mother
+        </span>
+        <span>
+        </span>
+       </div>
+       <div>
+        <span>
+         Aadhar Number
+        </span>
+        <span>
+        </span>
+       </div>
+       <div>
+        <span>
+         Mobile Number
+        </span>
+        <span>
+        </span>
+       </div>
+      </div>
+     </div>
+     <div class="section">
+      <div class="section-header">
+       School Information
+      </div>
+      <div class="section-content">
+       <div>
+        <span>
+         Register Number
+        </span>
+        <span>
+        </span>
+       </div>
+       <div>
+        <span>
+         College EmailId
+        </span>
+        <span>
+        </span>
+       </div>
+       <div>
+        <span>
+         Program
+        </span>
+        <span>
+        </span>
+       </div>
+       <div>
+        <span>
+         Branch
+        </span>
+        <span>
+        </span>
+       </div>
+       <div>
+        <span>
+         School
+        </span>
+        <span>
+        </span>
+       </div>
+      </div>
+     </div>
+     <div class="section">
+      <div class="section-header">
+       Current Address
+      </div>
+      <div class="section-content">
+       <div>
+        <span>
+         Street Name
+        </span>
+        <span>
+        </span>
+       </div>
+       <div>
+        <span>
+         Area Name
+        </span>
+        <span>
+        </span>
+       </div>
+       <div>
+        <span>
+         City
+        </span>
+        <span>
+        </span>
+       </div>
+       <div>
+        <span>
+         State
+        </span>
+        <span>
+        </span>
+       </div>
+       <div>
+        <span>
+         Country
+        </span>
+        <span>
+        </span>
+       </div>
+       <div>
+        <span>
+         Pincode
+        </span>
+        <span>
+        </span>
+       </div>
+       <div>
+        <span>
+         Phone Number(Land Line)
+        </span>
+        <span>
+        </span>
+       </div>
+       <div>
+        <span>
+         Personal EmailId
+        </span>
+        <span>
+        </span>
+       </div>
+      </div>
+     </div>
+     <div class="section">
+      <div class="section-header">
+       Permanent Address
+      </div>
+      <div class="section-content">
+       <div>
+        <span>
+         Street Name
+        </span>
+        <span>
+        </span>
+       </div>
+       <div>
+        <span>
+         Area Name
+        </span>
+        <span>
+        </span>
+       </div>
+       <div>
+        <span>
+         City
+        </span>
+        <span>
+        </span>
+       </div>
+       <div>
+        <span>
+         State
+        </span>
+        <span>
+        </span>
+       </div>
+       <div>
+        <span>
+         Country
+        </span>
+        <span>
+        </span>
+       </div>
+       <div>
+        <span>
+         Pincode
+        </span>
+        <span>
+        </span>
+       </div>
+       <div>
+        <span>
+         Phone Number(Land Line)
+        </span>
+        <span>
+        </span>
+       </div>
+       <div>
+        <span>
+         Personal EmailId
+        </span>
+        <span>
+        </span>
+       </div>
+       <div>
+        <span>
+         Friend Mobile Number
+        </span>
+        <span>
+        </span>
+       </div>
+      </div>
+     </div>
+    </div>
+   </div>
+  </div>
+ </body>
+</html>

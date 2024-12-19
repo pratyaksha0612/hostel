@@ -1,0 +1,202 @@
+<html>
+ <head>
+  <title>
+   Complaint Section
+  </title>
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" rel="stylesheet"/>
+  <style>
+   body {
+            font-family: Arial, sans-serif;
+            background-color: #f8f9fa;
+            margin: 0;
+            padding: 0;
+            display: flex;
+        }
+        .sidebar {
+            width: 50px;
+            background-color: #ffffff;
+            color: #000000;
+            height: calc(100vh - 60px); 
+            padding: 25px;
+            box-sizing: border-box;
+            position: fixed;
+            top: 60px; 
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+        .sidebar i {
+            font-size: 24px;
+            margin-bottom: 20px;
+            cursor: pointer;
+        }
+        .main-content {
+            flex: 1;
+            display: flex;
+            flex-direction: column;
+            margin-left: 100px; 
+        }
+        .header {
+            background-color: #1655a2;
+            padding: 10px 20px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            height: 40px; 
+            position: fixed;
+            width: 100%;
+            top: 0;
+            z-index: 1000;
+        }
+        .header .logo img {
+            height: 40px;
+            margin-right: 10px;
+        }
+        .header .user-info {
+            display: flex;
+            align-items: center;
+        }
+        .header .user-info img {
+            height: 40px;
+            border-radius: 50%;
+            margin-right: 10px;
+        }
+        .container {
+            background-color: #fff;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            width: 600px;
+            margin: 80px auto 20px auto; 
+        }
+        h1 {
+            font-size: 24px;
+            font-weight: bold;
+            margin-bottom: 20px;
+        }
+        label {
+            display: block;
+            margin-bottom: 5px;
+            font-weight: bold;
+        }
+        input[type="text"],
+        input[type="email"],
+        select,
+        textarea {
+            width: 100%;
+            padding: 10px;
+            margin-bottom: 20px;
+            border: 1px solid #ced4da;
+            border-radius: 4px;
+            font-size: 16px;
+        }
+        input[type="file"] {
+            margin-bottom: 20px;
+        }
+        .file-input {
+            display: flex;
+            align-items: center;
+        }
+        .file-input label {
+            margin-right: 10px;
+        }
+        .file-input input[type="file"] {
+            flex: 1;
+        }
+        button {
+            width: 100%;
+            padding: 15px;
+            background-color: #5a67d8;
+            color: #fff;
+            border: none;
+            border-radius: 4px;
+            font-size: 16px;
+            cursor: pointer;
+        }
+        button:hover {
+            background-color: #4c51bf;
+        }
+  </style>
+ </head>
+ <body>
+  <div class="header">
+   <div class="logo">
+    <img alt="Aura Homes Logo" height="40" src="Aura_Homes.png" width="75"/>
+   </div>
+   <div class="user-info">
+    <img alt="User Profile Picture" height="40" src="https://storage.googleapis.com/a1aa/image/qJDVSCZx0b66NFvpQe5G8euaKO4dO0j19F09uTPJrhLu1nyTA.jpg" width="40"/>
+    <span>
+     PARENT
+    </span>
+   </div>
+  </div>
+  <div class="sidebar">
+    <a href="/p-sidebar"><i class="fas fa-bars"></i></a>
+    <a href="/p-attendance"><i class="fas fa-bell"></i></a>
+    <a href="/p-mess-menu"><i class="fas fa-utensils"></i></a>
+    <a href="/p-room-cleaning"><i class="fas fa-broom"></i></a>
+    <a href="/p-complaints"><i class="fas fa-book"></i></a>
+    <a href="/p-notice-board"><i class="fas fa-thumbtack"></i></a>
+    <a href="/p-social-media"><i class="fas fa-comment"></i></a>
+    <a href="/p-contact"><i class="fas fa-phone-volume"></i></a>
+  </div>
+  <div class="main-content">
+   <div class="container">
+    <h1>
+     Complaint Section
+    </h1>
+    <form>
+     <label for="name">
+      Name
+     </label>
+     <input id="name" name="name" required="" type="text"/>
+     <label for="email">
+      Email
+     </label>
+     <input id="email" name="email" required="" type="email"/>
+     <label for="room-number">
+      Room Number
+     </label>
+     <input id="room-number" name="room-number" required="" type="text"/>
+     <label for="complaint-type">
+      Complaint Type
+     </label>
+     <select id="complaint-type" name="complaint-type" required="">
+      <option disabled="" selected="" value="">
+       Select a type
+      </option>
+      <option value="Electrician">
+       Electrician
+      </option>
+      <option value="Plumber">
+       Plumber
+      </option>
+      <option value="Carpenter">
+       Carpenter
+      </option>
+      <option value="Food">
+       Food
+      </option>
+      <option value="other">
+       Other
+      </option>
+     </select>
+     <label for="description">
+      Description
+     </label>
+     <textarea id="description" name="description" required="" rows="4"></textarea>
+     <div class="file-input">
+      <label for="image-upload">
+       Upload Image (optional)
+      </label>
+      <input id="image-upload" name="image-upload" type="file"/>
+     </div>
+     <button type="submit">
+      Submit Complaint
+     </button>
+    </form>
+   </div>
+  </div>
+ </body>
+</html>

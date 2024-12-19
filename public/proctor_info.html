@@ -1,0 +1,209 @@
+<html>
+ <head>
+  <title>
+   Proctor Details
+  </title>
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" rel="stylesheet"/>
+  <style>
+   body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f5f5f5;
+        }
+        .header {
+            background-color: #0056a3;
+            color: white;
+            padding: 10px 20px;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+        }
+        .header img {
+            height: 50px;
+        }
+        .header .user-info {
+            display: flex;
+            align-items: center;
+        }
+        .header .user-info img {
+            border-radius: 50%;
+            height: 40px;
+            margin-right: 10px;
+        }
+        .header .user-info span {
+            font-size: 14px;
+        }
+        .sidebar {
+            width: 60px;
+            background-color: #ffffff;
+            position: fixed;
+            top: 70;
+            bottom: 0;
+            padding-top: 10px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+        .sidebar i {
+            color: rgb(0, 0, 0);
+            font-size: 20px;
+            margin: 20px 0;
+        }
+        .content {
+            margin-left: 60px;
+            padding: 20px;
+        }
+        .tabs {
+            display: flex;
+            justify-content: space-around;
+            background-color: white;
+            padding: 10px 0;
+            border-bottom: 1px solid #ddd;
+        }
+        .tabs a {
+            text-decoration: none;
+            color: #333;
+            padding: 10px 20px;
+            border-radius: 5px;
+        }
+        .tabs a.active {
+            background-color: #0056a3;
+            color: white;
+        }
+        .details-table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-top: 20px;
+        }
+        .details-table th, .details-table td {
+            padding: 10px;
+            border: 1px solid #ddd;
+        }
+        .details-table th {
+            background-color: #e0e0e0;
+            text-align: left;
+        }
+        .details-table td {
+            background-color: #f9f9f9;
+        }
+        .details-table .profile-pic {
+            text-align: center;
+        }
+        .details-table .profile-pic img {
+            border: 1px solid #ddd;
+            border-radius: 5px;
+            width: 100px;
+            height: 100px;
+        }
+  </style>
+ </head>
+ <body>
+  <div class="header">
+    <img src="Aura_Homes.png"  alt="Aura Homes Logo" class="h-16" height="100"  width="75"/>
+   <div class="user-info">
+    <img src="Students.jpg"  alt="Student Logo" class="h-16" height="100"  width="50"/>
+     STUDENT NAME
+    </span>
+   </div>
+  </div>
+  <div class="sidebar">
+    <a href="/sidebar-student"><i class="fas fa-bars"></i></a>
+    <a href="/personal-info"><i class="fas fa-envelope"></i></a>
+    <a href="/student-attendance"><i class="fas fa-bell"></i></a>
+    <a href="/mess-menu"><i class="fas fa-utensils"></i></a>
+    <a href="/room-cleaning"><i class="fas fa-broom"></i></a>
+    <a href="#"><i class="fas fa-book"></i></a>
+    <a href="/notice-board"><i class="fas fa-thumbtack"></i></a>
+    <a href="/social-media"><i class="fas fa-comment"></i></a>
+    <a href="#"><i class="fas fa-phone-volume"></i></a>
+  </div>
+  <div class="content">
+   <div class="tabs">
+    <a href="/personal-info">
+     Personal Information
+    </a>
+    <a href="/educational-info">
+     Educational Information
+    </a>
+    <a href="/family-info">
+     Family Information
+    </a>
+    <a class="active" href="/proctor-info">
+     Proctor Details
+    </a>
+    <a href="/hostel-details">
+     Hostel Details
+    </a>
+   </div>
+   <table class="details-table">
+    <tr>
+     <th>
+      Faculty ID
+     </th>
+     <td>
+     </td>
+     <td class="profile-pic" rowspan="9">
+      <img alt="Faculty Profile Picture" height="100" src="https://storage.googleapis.com/a1aa/image/fkSOrMnZykz2f0rMXmVX9SgfgrYVBw6ZMRB47DtRcO2g6oknA.jpg" width="100"/>
+     </td>
+    </tr>
+    <tr>
+     <th>
+      Faculty Name
+     </th>
+     <td>
+     </td>
+    </tr>
+    <tr>
+     <th>
+      Faculty Designation
+     </th>
+     <td>
+     </td>
+    </tr>
+    <tr>
+     <th>
+      School
+     </th>
+     <td>
+     </td>
+    </tr>
+    <tr>
+     <th>
+      Cabin No.
+     </th>
+     <td>
+     </td>
+    </tr>
+    <tr>
+     <th>
+      Faculty Department
+     </th>
+     <td>
+     </td>
+    </tr>
+    <tr>
+     <th>
+      Faculty Email
+     </th>
+     <td>
+     </td>
+    </tr>
+    <tr>
+     <th>
+      Faculty intercom
+     </th>
+     <td>
+     </td>
+    </tr>
+    <tr>
+     <th>
+      Faculty Mobile Number
+     </th>
+     <td>
+     </td>
+    </tr>
+   </table>
+  </div>
+ </body>
+</html>

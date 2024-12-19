@@ -1,0 +1,300 @@
+<html>
+ <head>
+  <title>
+   Attendance Portal
+  </title>
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" rel="stylesheet"/>
+  <style>
+   body {
+            margin: 0;
+            font-family: Arial, sans-serif;
+            background-color: #F1F0E8;
+        }
+        .header {
+            background-color: #4a7a8c;
+            color: white;
+            padding: 10px 20px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        .header .left-section {
+            display: flex;
+            align-items: center;
+        }
+        .header .menu-icon {
+            font-size: 24px;
+            cursor: pointer;
+            margin-left: 20px;
+        }
+        .header .logo {
+            height: 40px;
+            margin-right: 20px;
+        }
+        .header .title {
+            font-size: 24px;
+        }
+        .header .right-section {
+            display: flex;
+            align-items: center;
+        }
+        .header .profile-photo {
+            height: 40px;
+            width: 40px;
+            border-radius: 50%;
+            margin-left: 20px;
+        }
+        .sidebar {
+            width: 60px;
+            background-color: #EEF7FF;
+            position: fixed;
+            top: 60px; /* Adjusted to start from the end of the header */
+            bottom: 0;
+            padding-top: 20px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+        .sidebar a {
+            text-decoration: none;
+            color: black;
+            padding: 15px 0;
+            text-align: center;
+            width: 100%;
+        }
+        .sidebar a:hover {
+            background-color: #c0d3de;
+        }
+        .content {
+            margin-left: 60px;
+            padding: 20px;
+        }
+        .content h1 {
+            font-size: 24px;
+            margin-bottom: 20px;
+        }
+        .attendance-section {
+            background-color: white;
+            border: 1px solid #ccc;
+            padding: 20px;
+            border-radius: 5px;
+        }
+        .attendance-section h2 {
+            font-size: 20px;
+            margin-bottom: 10px;
+        }
+        .attendance-section label {
+            display: block;
+            margin-bottom: 5px;
+        }
+        .attendance-section select {
+            width: 100%;
+            padding: 10px;
+            margin-bottom: 20px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+        }
+        .attendance-table {
+            width: 100%;
+            border-collapse: collapse;
+            display: none; /* Initially hide the table */
+        }
+        .attendance-table th, .attendance-table td {
+            border: 1px solid #ccc;
+            padding: 10px;
+            text-align: left;
+        }
+        .attendance-table th {
+            background-color: #f0f0f0;
+        }
+        .attendance-table select {
+            width: 100%;
+            padding: 5px;
+        }
+        .attendance-status {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+        .attendance-status i {
+            margin-left: 10px;
+            font-size: 18px;
+        }
+  </style>
+  <script>
+   function showTable() {
+            var semester = document.getElementById("semester").value;
+            var table = document.getElementById("attendance-table");
+            var attendanceHeader = document.getElementById("attendance-header");
+            if (semester) {
+                table.style.display = "table";
+                attendanceHeader.style.display = "block";
+            } else {
+                table.style.display = "none";
+                attendanceHeader.style.display = "none";
+            }
+        }
+  </script>
+ </head>
+ <body>
+  <div class="header">
+   <div class="left-section">
+    <img src="Aura_Homes.png"  alt="Aura Homes Logo" class="h-16" height="40"  width="75"/>
+    <span class="title">
+    </span>
+   </div>
+   <div class="right-section">
+    <img src="Authority .jpg"  alt="Student Logo" class="h-16" height="40"  width="50"/>
+   </div>
+  </div>
+  <div class="sidebar">
+   <a href="/a-sidebar">
+    <i class="fas fa-bars">
+    </i>
+   </a>
+   <a href="/a-attendance">
+    <i class="fas fa-bell">
+    </i>
+   </a>
+   <a href="/a-mess-menu">
+    <i class="fas fa-utensils">
+    </i>
+   </a>
+   <a href="/a-room-cleaning">
+    <i class="fas fa-broom">
+    </i>
+   </a>
+   <a href="/a-complaints">
+    <i class="fas fa-book">
+    </i>
+   </a>
+   <a href="/a-notice-board">
+    <i class="fas fa-thumbtack">
+    </i>
+   </a>
+   <a href="/a-social-media">
+    <i class="fas fa-comment">
+    </i>
+   </a>
+   <a href="/a-contact">
+    <i class="fas fa-phone">
+    </i>
+   </a>
+   <a href="/a-change">
+    <i class="fas fa-lock">
+    </i>
+   </a>
+  </div>
+  <div class="content">
+   <div class="attendance-section">
+    <h2>
+     Select Semester
+    </h2>
+    <label for="semester">
+     Semester:
+    </label>
+    <select id="semester" onchange="showTable()">
+     <option value="">
+      --Select Semester--
+     </option>
+     <option value="semester1">
+      Semester 1
+     </option>
+     <option value="semester2">
+      Semester 2
+     </option>
+     <option value="semester3">
+      Semester 3
+     </option>
+     <option value="semester4">
+      Semester 4
+     </option>
+    </select>
+    <h2 id="attendance-header" style="display: none;">
+     Attendance Table
+    </h2>
+    <table class="attendance-table" id="attendance-table">
+     <thead>
+      <tr>
+       <th>
+        Sr. No
+       </th>
+       <th>
+        Name
+       </th>
+       <th>
+        Registration No
+       </th>
+       <th>
+        Beadtype
+       </th>
+       <th>
+        Attendance
+       </th>
+       <th>
+        Status
+       </th>
+      </tr>
+     </thead>
+     <tbody>
+      <tr>
+       <td>
+       </td>
+       <td>
+       </td>
+       <td>
+       </td>
+       <td>
+       </td>
+       <td>
+        <select>
+         <option value="present">
+          Present
+         </option>
+         <option value="absent">
+          Absent
+         </option>
+         <option value="leave">
+          On Leave
+         </option>
+        </select>
+       </td>
+       <td class="attendance-status">
+        <i class="fas fa-unlock">
+        </i>
+       </td>
+      </tr>
+      <tr>
+       <td>
+       </td>
+       <td>
+       </td>
+       <td>
+       </td>
+       <td>
+       </td>
+       <td>
+        <select>
+         <option value="present">
+          Present
+         </option>
+         <option value="absent">
+          Absent
+         </option>
+         <option value="leave">
+          On Leave
+         </option>
+        </select>
+       </td>
+       <td class="attendance-status">
+        <i class="fas fa-lock">
+        </i>
+       </td>
+      </tr>
+      <!-- Add more rows as needed -->
+     </tbody>
+    </table>
+   </div>
+  </div>
+ </body>
+</html>

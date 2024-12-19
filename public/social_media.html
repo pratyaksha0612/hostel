@@ -1,0 +1,137 @@
+<html>
+<head>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+    <style>
+        body {
+            margin: 0;
+            font-family: Arial, sans-serif;
+        }
+        .sidebar {
+            height: 100vh;
+            width: 60px;
+            position: fixed;
+            top: 0;
+            left: 0;
+            background-color: #f1f1f1;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            padding-top: 20px;
+        }
+        .sidebar i {
+            font-size: 24px;
+            margin: 20px 0;
+            color: black;
+        }
+        .topbar {
+            height: 50px;
+            width: calc(100% - 60px);
+            position: fixed;
+            top: 0;
+            left: 60px;
+            background-color: #0056b3;
+            display: flex;
+            align-items: center;
+            justify-content: flex-end;
+            padding-right: 20px;
+            color: white;
+        }
+        .topbar i {
+            margin-right: 10px;
+        }
+        .content {
+            margin-left: 60px;
+            margin-top: 50px;
+            padding: 20px;
+        }
+        .content h1 {
+            font-size: 24px;
+            font-weight: bold;
+        }
+        .dropdown {
+            margin-top: 20px;
+        }
+        .dropdown select {
+            padding: 10px;
+            font-size: 16px;
+        }
+        .notice-box {
+            margin-top: 20px;
+            padding: 15px;
+            border: 1px solid #ccc;
+            background-color: #f9f9f9;
+            font-size: 16px;
+            width: 100%;
+            max-width: 600px;
+        }
+        .insta-id, .whatsapp-id {
+            margin-top: 20px;
+            padding: 15px;
+            border: 1px solid #ccc;
+            background-color: #f9f9f9;
+            font-size: 16px;
+            width: 100%;
+            max-width: 600px;
+            display: none;
+        }
+    </style>
+    <script>
+        function handleDropdownChange() {
+            var selectBox = document.getElementById("socialMediaDropdown");
+            var instaIdBox = document.getElementById("instaIdBox");
+            var whatsappIdBox = document.getElementById("whatsappIdBox");
+            if (selectBox.value === "Mess") {
+                instaIdBox.style.display = "block";
+                whatsappIdBox.style.display = "none";
+            } else if (selectBox.value === "Room Service") {
+                whatsappIdBox.style.display = "block";
+                instaIdBox.style.display = "none";
+            } else {
+                instaIdBox.style.display = "none";
+                whatsappIdBox.style.display = "none";
+            }
+        }
+    </script>
+</head>
+<body>
+    <div class="sidebar">
+        <a href="/sidebar-student"><i class="fas fa-bars"></i></a>
+        <a href="/personal-info"><i class="fas fa-envelope"></i></a>
+        <a href="student-attendance"><i class="fas fa-bell"></i></a>
+        <a href="/mess-menu"><i class="fas fa-utensils"></i></a>
+        <a href="/room-cleaning"><i class="fas fa-broom"></i></a>
+        <a href="#"><i class="fas fa-book"></i></a>
+        <a href="/notice-board"><i class="fas fa-thumbtack"></i></a>
+        <a href="/social-media"><i class="fas fa-comment"></i></a>
+        <a href="#"><i class="fas fa-phone-volume"></i></a>
+    </div>
+    <div class="topbar">
+        <i class="fas fa-question-circle"></i>
+        <span>STUDENT   </span>
+    </div>
+    <div class="content">
+        <h1>Social Media</h1>
+        <div class="dropdown">
+            <select id="socialMediaDropdown" onchange="handleDropdownChange()">
+                <option>--Connect Here--</option>
+                <option>Mess</option>
+                <option>Room Service</option>
+                <option>Other</option>
+            </select>
+        </div>
+        <div class="notice-box">
+            This is a notice box. You can add any important information here.
+        </div>
+        <div id="instaIdBox" class="insta-id">
+            Instagram ID: @example_insta_id1
+        <br><br>
+            WhatsApp ID: +1234567887
+        </div>
+        <div id="whatsappIdBox" class="whatsapp-id">
+            Instagram ID: @example_insta_id2
+        <br><br>
+            WhatsApp ID: +1234567890
+        </div>
+    </div>
+</body>
+</html>
